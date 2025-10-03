@@ -10,9 +10,31 @@
  *
  */
 
+#include "bme280.hpp"
 #include <iostream>
 
+//--> Setup
 int main() {
-    std::cout << "Hello, Raspberry Pi!" << std::endl;
+    //--> Create sensor object
+    BME280 sensor;
+
+    //--> Check if sensor is present
+    if (!sensor.begin(0x76, 1)) {
+        std::cerr << "BME280 not detected!" << std::endl;
+        return 1;
+    }
+
+    //--> Loop
+    while(1)
+	{
+		//--> Print current environment information
+    		std::cout << "Temperature: " << sensor.readTemperature() << " °C" << std::endl;
+    		std::cout << "Pressure: " << sensor.readPressure() << " hPa" << std::endl;
+    		std::cout << "Humidity: " << sensor.readHumidity() << " %" << std::endl;
+
+		//--> Sleep
+		std::this_thread::sleep_for(std::chrono::seconds(5));
+	}
     return 0;
 }
+
