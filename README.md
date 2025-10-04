@@ -14,7 +14,7 @@ Lab assignments P1:
 
 --------------------------------------------------------------------------
 My own experiences of the assignments:
-* OPDRACHT 1: 
+* OPDRACHT 1: Tried to find the material but i cant remember it being discussed in class, contacted Johan.
 * OPDRACHT 2: In PLANTUML i wrote a basic use case diagram for my BME280 library code, file name usecasediagram.txt
 * OPDRACHT 3: I wrote a library for the bosch BME280 sensor, it works with the Wire library to handle i2c commands.
 Written the library based on my work from last year.
