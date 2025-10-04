@@ -1,0 +1,27 @@
+@startuml
+title BME280 Sensor Application Use Case Diagram
+
+actor "User / Application" as User
+actor "I2C" as I2C
+
+rectangle "Sensor Application" {
+    usecase "Initialize Sensor" as UC_Init
+    usecase "Read Temperature" as UC_Temp
+    usecase "Read Humidity" as UC_Hum
+    usecase "Read Pressure" as UC_Pres
+    usecase "Perform I2C Communication" as UC_I2C
+}
+
+User --> UC_Init
+User <--> UC_Temp
+User <--> UC_Hum
+User <--> UC_Pres
+
+UC_Init --> UC_I2C
+UC_Temp --> UC_I2C
+UC_Hum --> UC_I2C 
+UC_Pres --> UC_I2C 
+
+UC_I2C --> I2C : "Transmit / Receive Data"
+
+@enduml
