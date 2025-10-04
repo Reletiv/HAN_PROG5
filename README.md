@@ -13,5 +13,17 @@ Lab assignments P1:
 * 8 Check your sensor library on DRY, KISS, SOLID and Loose Coupling / Strong Cohesion principles, refactor your code and report which principles you improved on.
 
 --------------------------------------------------------------------------
-OPDRACHT 3: I wrote a library for the bosch BME280 sensor, it works with the Wire library to handle i2c commands.
+My own experiences of the assignments:
+* OPDRACHT 1: 
+* OPDRACHT 2: 
+* OPDRACHT 3: I wrote a library for the bosch BME280 sensor, it works with the Wire library to handle i2c commands.
 Written the library based on my work from last year.
+* OPDRACHT 4: I ported the Arduino library to the raspberry pi. Porting my own library was not hard, but porting the i2c library was harder.
+* OPDRACHT 5: I added MQTT support with some help from the internet. i needed to compile a github mqtt c++ library for the raspberry pi because there is no support at first.
+Used my own MQTT server for testing 
+commands for running:
+--> g++ main.cpp bme280.cpp i2c.cpp -o bme280_mqtt -lpaho-mqttpp3 -lpaho-mqtt3as -pthread
+--> sudo ./bme280_mqtt
+* OPDRACHT 6:
+* OPDRACHT 7:
+* OPDRACHT 8:
