@@ -1,0 +1,42 @@
+@startuml
+title BME280 Raspberry Pi Sensor Application - Sequence Diagram
+
+actor "User/Application" as User
+participant "main.cpp" as Main
+participant "BME280" as Sensor
+participant "I2CDevice" as I2C
+participant "mqtt::async_client" as MQTT
+
+User -> Main : start program()
+Main -> Sensor : begin(0x76, 1)
+Sensor -> I2C : I2CDevice(bus, address)
+I2C --> Sensor : device ready
+Sensor -> I2C : readCalibration()
+I2C --> Sensor : calibration data
+Sensor --> Main : initialization OK
+
+== Main Loop ==
+Main -> Sensor : readTemperature()
+Sensor -> I2C : read raw temperature
+I2C --> Sensor : raw data
+Sensor --> Main : temperature value
+
+Main -> Sensor : readPressure()
+Sensor -> I2C : read raw pressure
+I2C --> Sensor : raw data
+Sensor --> Main : pressure value
+
+Main -> Sensor : readHumidity()
+Sensor -> I2C : read raw humidity
+I2C --> Sensor : raw data
+Sensor --> Main : humidity value
+
+Main -> MQTT : publishData(temp, hum, pres)
+MQTT --> Main : publish success
+
+loop every 5 seconds
+    Main -> Sensor : repeat readings
+    Main -> MQTT : publishData()
+end
+
+@enduml
