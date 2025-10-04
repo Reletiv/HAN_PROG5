@@ -15,7 +15,7 @@ Lab assignments P1:
 --------------------------------------------------------------------------
 My own experiences of the assignments:
 * OPDRACHT 1: 
-* OPDRACHT 2: 
+* OPDRACHT 2: In PLANTUML i wrote a basic use case diagram for my BME280 library code, file name usecasediagram.txt
 * OPDRACHT 3: I wrote a library for the bosch BME280 sensor, it works with the Wire library to handle i2c commands.
 Written the library based on my work from last year.
 * OPDRACHT 4: I ported the Arduino library to the raspberry pi. Porting my own library was not hard, but porting the i2c library was harder.
