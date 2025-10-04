@@ -24,6 +24,11 @@ Used my own MQTT server for testing
 commands for running:
 --> g++ main.cpp bme280.cpp i2c.cpp -o bme280_mqtt -lpaho-mqttpp3 -lpaho-mqtt3as -pthread
 --> sudo ./bme280_mqtt
-* OPDRACHT 6:
+* OPDRACHT 6: Since i modulairly programmed the code in the last assignments i could easily Generate an PLANTUML class and sequence diagram semi-automatically. It uses the right functions and connections and shows great patterns
+* Class diagram
+<img width="584" height="828" alt="image" src="https://github.com/user-attachments/assets/7d083862-6d8a-408a-b08d-a18cb75b7bf0" />
+* Sequence Diagram
+<img width="742" height="962" alt="image" src="https://github.com/user-attachments/assets/1d82d298-4423-4147-bdf7-3fce9ebe1b74" />
+
 * OPDRACHT 7:
 * OPDRACHT 8:
