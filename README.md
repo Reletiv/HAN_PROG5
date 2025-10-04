@@ -14,8 +14,10 @@ Lab assignments P1:
 
 --------------------------------------------------------------------------
 My own experiences of the assignments:
-* OPDRACHT 1: Tried to find the material but i cant remember it being discussed in class, contacted Johan.
+* OPDRACHT 1: Contacted Johan, Due to this being an introduction to git, this assignment was not needed.
 * OPDRACHT 2: In PLANTUML i wrote a basic use case diagram for my BME280 library code, file name usecasediagram.txt
+<img width="727" height="507" alt="image" src="https://github.com/user-attachments/assets/d4ed0c5b-8eff-4a3b-82c4-6b75d467b722" />
+
 * OPDRACHT 3: I wrote a library for the bosch BME280 sensor, it works with the Wire library to handle i2c commands.
 Written the library based on my work from last year.
 * OPDRACHT 4: I ported the Arduino library to the raspberry pi. Porting my own library was not hard, but porting the i2c library was harder.
@@ -27,6 +29,7 @@ commands for running:
 * OPDRACHT 6: Since i modulairly programmed the code in the last assignments i could easily Generate an PLANTUML class and sequence diagram semi-automatically. It uses the right functions and connections and shows great patterns
 * Class diagram
 <img width="584" height="828" alt="image" src="https://github.com/user-attachments/assets/7d083862-6d8a-408a-b08d-a18cb75b7bf0" />
+
 * Sequence Diagram
 <img width="742" height="962" alt="image" src="https://github.com/user-attachments/assets/1d82d298-4423-4147-bdf7-3fce9ebe1b74" />
 
