@@ -33,5 +33,11 @@ commands for running:
 * Sequence Diagram
 <img width="742" height="962" alt="image" src="https://github.com/user-attachments/assets/1d82d298-4423-4147-bdf7-3fce9ebe1b74" />
 
-* OPDRACHT 7:
+* OPDRACHT 7: I made an very basic unit test of the BME280 sensor, to confirm if the sensor behaviour actually works.
+* Possible to apply in an eviromental chamber together with an calibrated meter to confirm the exact readings.
+
+* Unit test of functions of the sensor
+<img width="819" height="421" alt="image" src="https://github.com/user-attachments/assets/0c019841-af8c-40f7-b7af-444f06fc309e" />
+
+* 
 * OPDRACHT 8:
