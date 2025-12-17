@@ -2,7 +2,7 @@
  * \file      bme280.hpp
  * \brief     Responsible for environment sensor handling
  * \author    Wietse Houwers
- * \date      September 2025
+ * \date      December 2025
  *
  */
 
@@ -49,7 +49,7 @@ private:
     int8_t dig_H6;
 	
     //--> variable from bosch datasheet
-    int32_t t_fine;         
+    //int32_t t_fine;      //removed to improve cohesion/coupling
 
     //--> Store last known valid readings
     float lastTemperature = 20.0;
@@ -66,6 +66,12 @@ private:
 
     //--> Read calibration data from sensor
     void readCalibration();
+
+    //--> Helper function for DRY principle
+    float validOrLast(float value, float min, float max, float last);
+
+    //--> Helper function for cohesiuon/coupling
+    int32_t updateTFine();
 };
 
 #endif //--> BME280_HPP
