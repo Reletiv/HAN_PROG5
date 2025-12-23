@@ -15,6 +15,8 @@
 * The mqtt callback listens for messages on the REMOTE_TOPIC and updates the corresponding values in the vitals struct when a message is received.
 * the trainee monitor should only have to listen on the TOPIC using an callback. the instructor panel can publish to the REMOTE_TOPIC to change the values.
 * the Scenario editor of the other group can also be used to publish to the REMOTE_TOPIC to change the values and look at TOPIC to see the current values
+*
+* command used to compile:  g++ main.cpp -o mqtt -lpaho-mqttpp3 -lpaho-mqtt3as -pthread  then to run: ./mqtt
 */
 
 #include <iostream>
@@ -97,7 +99,7 @@ void receiveData(const std::string& topic, const std::string& payload) {
         vitals.bodyTemperature.store(value);
     }
 
-    std::cout << "[MQTT] " << topic << " = " << value << std::endl;
+    std::cout << "[MQTT-VALUE-CHANGED] " << topic << " Is set to: " << value << std::endl;
 }
 
 
@@ -162,6 +164,7 @@ int main() {
         std::cout << "Blood Pressure: " << bp << " mmHg" << std::endl;
         std::cout << "Blood Oxygen: " << oxy << " %" << std::endl;
         std::cout << "Breath Speed: " << br << " breaths/min" << std::endl;
+        std::cout << "-----------------------------" << std::endl;
         
         // publish data
         publishData(client, hb, bp, oxy, br, temp);
